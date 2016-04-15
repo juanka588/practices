@@ -1,13 +1,10 @@
 package string;
 
+import java.util.Collections;
+
 public class Main {
 
-    public static void main(String[] args) {
-
-        System.out.println(isUniqueChars("hello world"));
-        System.out.println(isUniqueChars("abcs world"));
-
-    }
+    public static final char END_CHAR = '.';
 
     /**
      * Implement an algorithm to determine if a string has all unique
@@ -27,5 +24,23 @@ public class Main {
             }
         }
         return true;
+    }
+
+    /***
+     * Write code to reverse a C-Style String. (C-String means that “abcd” is
+     * represented as five characters, including the null character.)
+     */
+    public static String reverse(String source) {
+
+        char chars[] = source.toCharArray();
+        int size = chars.length;
+        char temp;
+        for (int i = 0; i < size / 2; i++) {
+            temp = chars[i];
+            chars[i] = chars[size - i - 1];
+            chars[size - i - 1] = temp;
+        }
+        return new String(chars)+END_CHAR;
+
     }
 }
