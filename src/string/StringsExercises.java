@@ -1,8 +1,7 @@
 package string;
 
-import sun.net.www.content.audio.basic;
 
-public class Main {
+public class StringsExercises {
 
     public static final char END_CHAR = '.';
 
