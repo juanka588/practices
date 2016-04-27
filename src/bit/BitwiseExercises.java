@@ -44,6 +44,15 @@ public class BitwiseExercises {
             System.out.print(freq[i] + " ");
         }
         System.out.println();
+
+        String n = "150.95";
+        double val = Double.parseDouble(n);
+        val += 1e-6;
+        System.out.println(val);
+        int aux = (int) (100 * val);
+        System.out.println(aux);
+        val = aux / 100d;
+        System.out.println(val);
     }
 
 }
